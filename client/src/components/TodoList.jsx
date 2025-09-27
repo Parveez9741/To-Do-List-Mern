@@ -1,3 +1,5 @@
+import { RiDeleteBin3Line } from "react-icons/ri"; 
+import { BiCommentEdit } from "react-icons/bi"; 
 import { AiFillDelete } from "react-icons/ai"; 
 import { AiFillEdit } from "react-icons/ai"; 
 import { useEffect, useState } from "react"
@@ -108,9 +110,9 @@ return (
         {todos.map((todo) => (
             <li key={todo._id}>
                 {todo.message}
-                <AiFillEdit  className="icon" onClick={() => handleEdit(todo)} />
+                <BiCommentEdit  className="icon" onClick={() => handleEdit(todo)} />
 
-             <AiFillDelete className="icon" onClick={() =>  handleDelete(todo._id)} />       
+              <RiDeleteBin3Line className="icon" onClick={() =>  handleDelete(todo._id)} />       
             </li>
         ))}
     </ul>
